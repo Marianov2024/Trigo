@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="200" onload="startup()" onmousemove="moveIt(evt)">
+<script><![CDATA[
+function startup(){
+ Gx=document.getElementById("vx"); Gy=document.getElementById("vy");
+ Gd=document.getElementById("vd"); An=document.getElementById("ang");
+ txAlf=document.getElementById("alf"); cos=document.getElementById("atx");
+ sin=document.getElementById("aty"); cAlf=document.getElementById("alfC");
+}
+function moveIt(evt){
+ x=evt.pageX-100;   y=evt.pageY-100;  z=Math.sqrt(x*x+y*y);
+ if(z==0){x=0;y=0;g=0;}
+  else{x=x/z;a=x*20;cos.firstChild.nodeValue="x = "+x;
+       y=y/z;b=y*20;sin.firstChild.nodeValue="y = "+(-y);
+       g=-Math.asin(y)/3.1415926535897932384626433832795*180;if(x<=0){g=180-g;};if(g<0){g=g+360;}
+       g1=Math.trunc(g); ga=(g-g1)*60; g2=Math.trunc(ga); gb=(ga-g2)*60; g3=Math.trunc(gb);
+       gc=(gb-g3)*60; g4=Math.trunc(gc); gd=(gc-g4)*60; g5=Math.trunc(gd);
+ }
+ x=x*90;y=y*90;
+ txAlf.firstChild.nodeValue="α = "+(g)+"º"; cAlf.firstChild.nodeValue=(g1)+"º"+(g2)+"'"+(g3)+"''"+g4+"'''"+g5+"''''";
+ if(x>=0){Gx.setAttributeNS(null,"d","m100,100h"+x+"l-10,-3m0,6l10,-3");}
+ else{    Gx.setAttributeNS(null,"d","m100,100h"+x+"l10,-3m0,6l-10,-3");}
+ if(y>0){ Gy.setAttributeNS(null,"d","m100,100v"+y+"l-3,-10m6,0l-3,10");}
+ else{    Gy.setAttributeNS(null,"d","m100,100v"+y+"l3,10m-6,0l3,-10"); }
+ Gd.setAttributeNS(null,"transform","rotate("+(-g)+")");
+ if(b<0){ An.setAttributeNS(null,"d","m100,100l20,0a20,20 0,0,0 "+(a-20)+","+(b)+"z");}
+ else{    An.setAttributeNS(null,"d","m100,100l20,0a20,20 0,1,0 "+(a-20)+","+(b)+"z");}
+}
+]]></script>
+<g transform="translate(0.5,0.5)">
+ <circle cx="100" cy="100" r="90" fill="none" stroke="black" stroke-width="1"/>
+ <path id="ang" d="" fill="#8f8" stroke-width="1" stroke="#fa0"/>
+ <path d="m0,100h200M100,0v200" fill="none" stroke="black" stroke-width="1"/>
+ <path id="vx" d="" fill="none" stroke-width="1" stroke="#f00"/>
+ <path id="vy" d="" fill="none" stroke-width="1" stroke="#00f"/>
+ <g transform="translate(100,100)"><g id="vd" transform="rotate(0)">
+  <path d="m0,0h90l-10,5m0,-10l10,5" fill="none" stroke-width="1" stroke="#fa0"/>
+ </g></g>
+</g>
+<text id="alf" x="200" y="20">α = 0º</text><text id="alfC" x="225" y="40">0º</text>
+<text id="atx" x="200" y="60">x</text><text id="aty" x="200" y="80">y</text>
+</svg>
