@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2000" height="8000">
+<script><![CDATA[
+var xmlns="http://www.w3.org/2000/svg";
+var Root=document.documentElement;
+var salto=35;
+function programa(){
+ var salfa=Math.random();
+ var calfa,talfa;
+  escriu("sin(α) = "+salfa);
+  escriu("Solució a un hipotètic triangle de hipotenusa = 1",20);
+  escriu("Aplicant 1 = sin²(α) + cos²(α) o Pitàgores a un triangle de hipotenusa 1 i aïllant obtenim:");
+  calfa=Math.sqrt(1.-salfa*salfa);
+  escriu("cos(α) = √( 1 - (sin(α))² ) = "+calfa );
+  talfa=salfa/calfa;
+  escriu("tan(α) = sin(α)/cos(α) = "+talfa );
+  escriu("sin(β) = cos(α) = "+calfa);
+  escriu("cos(β) = sin(α) = "+salfa);
+  escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
+
+  escriu(1,540,190);
+  escriu(salfa,605,200);
+  escriu(calfa,520,270);
+}
+function programa2(){
+ var calfa=Math.random();
+ var salfa,talfa;
+  escriu("cos(α) = "+calfa);
+  escriu("Solució a un hipotètic triangle de hipotenusa = 1",20);
+  escriu("Aplicant 1 = sin²(α) + cos²(α) o Pitàgores a un triangle de hipotenusa 1 i aïllant obtenim:");
+  salfa=Math.sqrt(1.-calfa*calfa);
+  escriu("sin(α) = √( 1 - (cos(α))² ) = "+salfa );
+  talfa=salfa/calfa;
+  escriu("tan(α) = sin(α)/cos(α) = "+talfa );
+  escriu("sin(β) = cos(α) = "+calfa);
+  escriu("cos(β) = sin(α) = "+salfa);
+  escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
+
+  escriu(1,540,190);
+  escriu(salfa,605,200);
+  escriu(calfa,520,270);
+}
+function programa3(){
+ var talfa=1/(5*Math.random()+0.01);
+ var salfa,calfa,hipo;
+  hipo=Math.sqrt(1+talfa*talfa);
+  escriu("tan(α) = "+talfa);
+  escriu("Solució a un hipotètic triangle amb CA = 1",20);
+  escriu("Hipotenusa = "+hipo);
+  salfa=talfa/hipo;
+  escriu("sin(α) = tan(α)/Hipotenusa "+salfa );
+  calfa=1./hipo;
+  escriu("cos(α) = 1/Hipotenusa = "+calfa );
+  escriu("sin(β) = cos(α) = "+calfa);
+  escriu("cos(β) = sin(α) = "+salfa);
+  escriu("tan(β) = 1/tan(α) = "+1/talfa);
+
+  escriu(hipo.toFixed(5),480,200);
+  escriu(talfa,605,200);
+  escriu(1,550,270);
+}
+function demanaUnNombre(t1,t2){return parseInt(prompt(t1,t2));}
+function demanaUnText(t1,t2){return prompt(t1,t2);}
+function salta(){salto=salto+30;return salto;}
+function escriu(pat,x=30,y=salta()){
+ var T=document.createElementNS(xmlns,"text");
+ var Msg=document.createTextNode(pat);
+ T.setAttributeNS(null,"x",x);
+ T.setAttributeNS(null,"y",y);
+ T.setAttributeNS(null,"font-size","15pt");
+ T.appendChild(Msg);
+ Root.appendChild(T);
+}
+]]></script>
+<text x="25" y="30" font-size="20" >sin(α)</text>
+<text x="125" y="30" font-size="20" >cos(α)</text>
+<text x="225" y="30" font-size="20" >tan(α)</text>
+ <rect onclick="programa()" rx="3" ry="3" x="10" y="10" width="80" fill="#edd" fill-opacity="0.2" height="30" stroke="black"/>
+ <rect onclick="programa2()" rx="3" ry="3" x="110" y="10" width="80" fill="#edd" fill-opacity="0.2" height="30" stroke="black"/>
+ <rect onclick="programa3()" rx="3" ry="3" x="210" y="10" width="80" fill="#edd" fill-opacity="0.2" height="30" stroke="black"/>
+<g id="hi" transform="translate(0,0)">
+ <path d="m500,250h100v-100zM515,250a15,15 0,0,0 -4.393,-10.606M600,165a15,15 0,0,1 -10.606,-4.393" fill="#dfe" stroke="#000"/>
+ <text x="520" y="245" font-size="20" >α</text><text x="585" y="180" font-size="20" >β</text>
+</g>
+</svg>
