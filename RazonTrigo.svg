@@ -19,7 +19,7 @@ function programa(){
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
   escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
-  escriu("α = arcSin(α) = "+(Math.asin(salfa))+"º" );
+  escriu("α = arcSin(sin(α)) = "+(Math.asin(salfa))+"º" );
 
   escriu(1,540,190);
   escriu(salfa,605,200);
@@ -42,7 +42,7 @@ function programa2(){
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
   escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
-  escriu("α = arcCos(α) = "+(Math.acos(calfa))+"º" );
+  escriu("α = arcCos(cos(α)) = "+(Math.acos(calfa))+"º" );
 
   escriu(1,540,190);
   escriu(salfa,605,200);
@@ -57,7 +57,7 @@ function programa3(){
   escriu("a)",25);
   escriu("Hipotenusa = "+hipo);
   salfa=talfa/hipo;
-  escriu("sin(α) = tan(α)/Hipotenusa "+salfa );
+  escriu("sin(α) = tan(α)/Hipotenusa = "+salfa );
   calfa=1./hipo;
   escriu("cos(α) = 1/Hipotenusa = "+calfa );
   escriu("b)",25);
@@ -65,7 +65,7 @@ function programa3(){
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+1/talfa)
   escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
-  escriu("α = arcTan(α) = "+(Math.atan(talfa))+"º" );
+  escriu("α = arcTan(tan(α)) = "+(Math.atan(talfa))+"º" );
 
   escriu(hipo.toFixed(5),480,200);
   escriu(talfa,605,200);
