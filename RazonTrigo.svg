@@ -19,7 +19,7 @@ function programa(){
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
   escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
-  escriu("α = arcSin(α) ="+(Math.asin(salfa))+"º" );
+  escriu("α = arcSin(α) = "+(Math.asin(salfa))+"º" );
 
   escriu(1,540,190);
   escriu(salfa,605,200);
@@ -31,7 +31,8 @@ function programa2(){
   escriu("cos(α) = "+calfa);
   escriu("Solució a un hipotètic triangle de hipotenusa = 1",20);
   escriu("a)",25);
-  escriu("Aplicant 1 = sin²(α) + cos²(α) o Pitàgores a un triangle de hipotenusa 1 i aïllant obtenim:");
+  escriu("Aplicant 1 = sin²(α) + cos²(α)");
+  escriu("o Pitàgores a un triangle de hipotenusa 1 i aïllant obtenim:");
   salfa=Math.sqrt(1.-calfa*calfa);
   escriu("sin(α) = √( 1 - (cos(α))² ) = "+salfa );
   talfa=salfa/calfa;
@@ -41,7 +42,7 @@ function programa2(){
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
   escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
-  escriu("α = arcCos(α)"+(Math.acos(calfa))+"º" );
+  escriu("α = arcCos(α) = "+(Math.acos(calfa))+"º" );
 
   escriu(1,540,190);
   escriu(salfa,605,200);
@@ -64,7 +65,7 @@ function programa3(){
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+1/talfa)
   escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
-  escriu("α = arcTan(α)"+(Math.atan(talfa))+"º" );
+  escriu("α = arcTan(α) = "+(Math.atan(talfa))+"º" );
 
   escriu(hipo.toFixed(5),480,200);
   escriu(talfa,605,200);
