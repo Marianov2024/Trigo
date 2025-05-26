@@ -8,14 +8,18 @@ function programa(){
  var calfa,talfa;
   escriu("sin(α) = "+salfa);
   escriu("Solució a un hipotètic triangle de hipotenusa = 1",20);
+  escriu("a)",25);
   escriu("Aplicant 1 = sin²(α) + cos²(α) o Pitàgores a un triangle de hipotenusa 1 i aïllant obtenim:");
   calfa=Math.sqrt(1.-salfa*salfa);
   escriu("cos(α) = √( 1 - (sin(α))² ) = "+calfa );
   talfa=salfa/calfa;
   escriu("tan(α) = sin(α)/cos(α) = "+talfa );
+  escriu("b)",25);
   escriu("sin(β) = cos(α) = "+calfa);
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
+  escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
+  escriu("α = arcSin(α) ="+(Math.asin(salfa))+"º" );
 
   escriu(1,540,190);
   escriu(salfa,605,200);
@@ -26,14 +30,18 @@ function programa2(){
  var salfa,talfa;
   escriu("cos(α) = "+calfa);
   escriu("Solució a un hipotètic triangle de hipotenusa = 1",20);
+  escriu("a)",25);
   escriu("Aplicant 1 = sin²(α) + cos²(α) o Pitàgores a un triangle de hipotenusa 1 i aïllant obtenim:");
   salfa=Math.sqrt(1.-calfa*calfa);
   escriu("sin(α) = √( 1 - (cos(α))² ) = "+salfa );
   talfa=salfa/calfa;
   escriu("tan(α) = sin(α)/cos(α) = "+talfa );
+  escriu("b)",25);
   escriu("sin(β) = cos(α) = "+calfa);
   escriu("cos(β) = sin(α) = "+salfa);
   escriu("tan(β) = 1/tan(α) = "+(1./talfa) );
+  escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
+  escriu("α = arcCos(α)"+(Math.acos(calfa))+"º" );
 
   escriu(1,540,190);
   escriu(salfa,605,200);
@@ -44,15 +52,19 @@ function programa3(){
  var salfa,calfa,hipo;
   hipo=Math.sqrt(1+talfa*talfa);
   escriu("tan(α) = "+talfa);
-  escriu("Solució a un hipotètic triangle amb CA = 1",20);
+ escriu("Solució a un hipotètic triangle amb CA = 1",20);
+  escriu("a)",25);
   escriu("Hipotenusa = "+hipo);
   salfa=talfa/hipo;
   escriu("sin(α) = tan(α)/Hipotenusa "+salfa );
   calfa=1./hipo;
   escriu("cos(α) = 1/Hipotenusa = "+calfa );
+  escriu("b)",25);
   escriu("sin(β) = cos(α) = "+calfa);
   escriu("cos(β) = sin(α) = "+salfa);
-  escriu("tan(β) = 1/tan(α) = "+1/talfa);
+  escriu("tan(β) = 1/tan(α) = "+1/talfa)
+  escriu("c) ara sí es pot utilitzar funcións trigonomètriques",25);
+  escriu("α = arcTan(α)"+(Math.atan(talfa))+"º" );
 
   escriu(hipo.toFixed(5),480,200);
   escriu(talfa,605,200);
